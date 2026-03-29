@@ -35,8 +35,8 @@ services:
     container_name: book-library-nginx
     restart: unless-stopped
     ports:
-      # Application is available at http://localhost:8080
-      - "8080:80"
+      # Application is available at http://localhost:8081
+      - "8081:80"
     volumes:
       - .:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
@@ -57,7 +57,7 @@ services:
       MYSQL_ROOT_PASSWORD: rootsecret
     ports:
       # Also exposed on host for direct DB access with a client (optional)
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       # Named volume persists data across container restarts
       - db-data:/var/lib/mysql

@@ -85,7 +85,7 @@ return [
             'processors' => [],
             'pattern'    => null,
             'exclude'    => [],
-            'open_api_spec_version' => env('SWAGGER_VERSION', \OpenApi\Generator::UNDEFINED),
+            'open_api_spec_version' => env('SWAGGER_VERSION', '3.0.0'),
         ],
 
         'securityDefinitions' => [
